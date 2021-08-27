@@ -1,0 +1,11 @@
+.blue__line {
+  width: 6rem;
+  border-top: solid 4px #03c4c7;
+  margin: 3rem 0;
+}
+
+@media screen and (max-width: 800px) {
+  .blue__line {
+    margin: 1rem 0;
+  }
+}

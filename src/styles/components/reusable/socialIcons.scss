@@ -1,0 +1,19 @@
+.socialIcons__container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.6rem;
+  margin-top: 8rem;
+  svg {
+    cursor: pointer;
+    &:hover {
+      path {
+        fill: $secondaryWhite;
+      }
+      g {
+        path {
+          fill: $secondaryWhite;
+        }
+      }
+    }
+  }
+}

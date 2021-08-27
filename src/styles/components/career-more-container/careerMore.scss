@@ -1,0 +1,31 @@
+.careerMore__wrapper {
+  background-color: $secondaryBackgroundWhite;
+  padding-top: 18rem;
+
+  &__container {
+    width: 80rem;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .careerMore__wrapper {
+    &__container {
+      width: 76rem;
+      margin: auto;
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .careerMore__wrapper {
+    padding-top: 11rem;
+
+    &__container {
+      width: 100%;
+      margin: auto;
+      padding: 0 1.6rem;
+    }
+  }
+}

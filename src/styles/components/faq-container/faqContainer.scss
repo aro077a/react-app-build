@@ -1,0 +1,53 @@
+.faq__container__wrapper {
+  @include displayCustomGrid(auto, center, center);
+  padding: 16rem 0;
+
+  &--title {
+    font-size: 48px;
+    color: #1f2937;
+  }
+  .rc-collapse {
+    border: none;
+    border-top: 1px solid #c4c8ce;
+    border-bottom: 1px solid #c4c8ce;
+    & .faq__container__panel-header {
+      font-size: 20px;
+      color: #1f2937;
+      font-weight: bold;
+      background-color: #fff;
+    }
+    &-header {
+      height: 9.5rem;
+    }
+    &-content {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #6b7280;
+    }
+  }
+}
+
+.faq__container {
+  width: 58vw;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .faq__container__wrapper {
+    .blue__line {
+      margin: 2rem 0;
+    }
+    &--title {
+      font-size: 24px;
+    }
+    .rc-collapse {
+      &-header {
+        height: 5.5rem;
+      }
+      &-content {
+        height: 4.2rem;
+      }
+    }
+  }
+}

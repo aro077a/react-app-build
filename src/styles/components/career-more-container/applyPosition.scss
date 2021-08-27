@@ -1,0 +1,168 @@
+.applyPosition__container {
+  width: 58rem;
+  padding: 16rem 0 10rem;
+  margin: auto;
+
+  &--title {
+    opacity: 0.9;
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: 0.64px;
+    color: $primaryDarkGrey;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  &__form {
+    input {
+      width: 58rem !important;
+      height: 6.4rem !important;
+      margin-bottom: 2.4rem;
+    }
+
+    &__submitButton {
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.63;
+      letter-spacing: 0.22px;
+      @include actionButtons(
+        1px solid $primaryLightGreenBlue,
+        $secondaryWhite,
+        $primaryLightGreenBlue,
+        0 3px 3px 0,
+        64px,
+        58rem
+      );
+    }
+    &__file {
+      width: 58rem;
+      height: 6.4rem;
+      margin-bottom: 3.4rem;
+      border: 2px dashed #b6b9bc !important;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > label {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        letter-spacing: 0.22px;
+        color: #1e1f3b;
+        > span {
+          display: inline-block;
+          font-size: 3rem;
+          font-weight: bolder;
+          color: #ff6943;
+          margin-right: 1.6rem;
+        }
+      }
+
+      input {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .applyPosition__container {
+    width: 48rem;
+    padding: 7.5rem 0 4.8rem;
+
+    &__form {
+      input {
+        width: 48rem !important;
+      }
+      &__submitButton {
+        @include actionButtons(
+          1px solid $primaryLightGreenBlue,
+          $secondaryWhite,
+          $primaryLightGreenBlue,
+          0 3px 3px 0,
+          64px,
+          48rem
+        );
+      }
+      &__file {
+        width: 48rem;
+        height: 6.4rem;
+        margin-bottom: 3.4rem;
+        border: 2px dashed #b6b9bc !important;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > label {
+          > span {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: bolder;
+            color: #ff6943;
+            margin-right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .applyPosition__container {
+    width: 100%;
+    padding: 6.3rem 0 6.5rem;
+
+    &--title {
+      font-size: 2.4rem;
+      letter-spacing: 0.48px;
+      margin-bottom: 2.4rem;
+    }
+    .contactUs__container__form {
+      .input__container {
+        input {
+          height: 4.8rem;
+        }
+      }
+      .react-tel-input input {
+        height: 4.8rem;
+      }
+    }
+    .contactUs__container__form__textarea {
+      textarea {
+        min-height: 14rem;
+      }
+    }
+
+    &__form {
+      input {
+        width: 100% !important;
+        height: 4.8rem !important;
+        margin-bottom: 1.6rem;
+      }
+
+      &__submitButton {
+        @include actionButtons(
+          1px solid $primaryLightGreenBlue,
+          $secondaryWhite,
+          $primaryLightGreenBlue,
+          0 3px 3px 0,
+          48px,
+          100%
+        );
+      }
+      &__file {
+        width: 100%;
+        margin-bottom: 3.2rem;
+        > label {
+          > span {
+            display: inline-block;
+            font-size: 2.55rem;
+            margin-right: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

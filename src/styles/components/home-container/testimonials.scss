@@ -1,0 +1,43 @@
+.testimonials__container {
+  width: 71.5%;
+  margin: 15rem auto 0 14.2vw;
+  position: relative;
+
+  &--title {
+    font-size: 8.7rem;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .testimonials__container {
+    width: 82%;
+    margin: 7rem auto 0 14.2vw;
+    &--title {
+      font-size: 6rem;
+      opacity: 0.72;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .testimonials__container {
+    width: 96%;
+    margin: 4.8rem auto 0 auto;
+
+    &--titleBlock {
+      display: grid;
+      place-items: center;
+    }
+
+    &--title {
+      font-size: 2.4rem;
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+    .blue-line {
+      margin: auto;
+    }
+  }
+}

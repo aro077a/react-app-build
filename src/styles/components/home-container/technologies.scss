@@ -1,0 +1,28 @@
+.techno__wrapper {
+  padding-top: 7.5rem;
+
+  &__title {
+    font-size: 3.5rem;
+    margin-top: 64px;
+  }
+
+  &__square__container {
+    max-width: 85px;
+    display: flex;
+    justify-content: space-between;
+
+    &__second-square,
+    &__third-square,
+    &__first-square {
+      width: 16px;
+      height: 16px;
+      padding: 5px;
+      background-color: #c4c8ce;
+    }
+  }
+  .inner__square {
+    width: 6px;
+    height: 6px;
+    background-color: $secondaryWhite;
+  }
+}

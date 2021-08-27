@@ -1,0 +1,98 @@
+// about container styles
+
+@import "./about-container/aboutContainer.scss";
+@import "./about-container/aboutUs.scss";
+@import "./about-container/aboutWorks.scss";
+@import "./about-container/approach.scss";
+@import "./about-container/joinTeam.scss";
+
+// career container styles
+
+@import "./career-container/careerContainer.scss";
+@import "./career-container/offer.scss";
+@import "./career-container/position.scss";
+@import "./career-container/values.scss";
+
+// career-more container styles
+
+@import "./career-more-container/applyPosition.scss";
+@import "./career-more-container/careerMore.scss";
+@import "./career-more-container/careerMorePosition.scss";
+
+// contact container styles
+
+@import "./contact-container/contactContainer.scss";
+@import "./contact-container/contactInfo.scss";
+
+// faq container styles
+
+@import "./faq-container/faqContainer.scss";
+
+// home container styles
+
+@import "./home-container/contactUs.scss";
+@import "./home-container/estimate.scss";
+@import "./home-container/homeContainer.scss";
+@import "./home-container/homeContainerTab.scss";
+@import "./home-container/imageContainer.scss";
+@import "./home-container/navbar.scss";
+@import "./home-container/ourServices.scss";
+@import "./home-container/ourWorks.scss";
+@import "./home-container/services.scss";
+@import "./home-container/slideContentTab.scss";
+@import "./home-container/technologies.scss";
+@import "./home-container/testimonials.scss";
+@import "./home-container/testimonialsSlide.scss";
+@import "./home-container/works.scss";
+@import "./home-container/worksContentTab.scss";
+@import "./home-container/worksScrollSlider.scss";
+
+// mobile-navbar styles
+
+@import "./mobile-navbar/mobileNavbar.scss";
+@import "./mobile-navbar/mobileTranslate.scss";
+
+// reusable components styles
+@import "./reusable/BlueLine.scss";
+@import "./reusable/button.scss";
+@import "./reusable/contentDescription.scss";
+@import "./reusable/imageContainer.scss";
+@import "./reusable/input.scss";
+@import "./reusable/slider.scss";
+@import "./reusable/socialIcons.scss";
+@import "./reusable/swiper.scss";
+@import "./reusable/spinner.scss";
+@import "./reusable/videoContainer.scss";
+
+// services container styles
+
+@import "./services-container/descriptionComponent.scss";
+@import "./services-container/developmentContainer.scss";
+@import "./services-container/getProjectComponent.scss";
+@import "./services-container/imageComponent.scss";
+@import "./services-container/services-list-item.scss";
+@import "./services-container/services-navbar.scss";
+@import "./services-container/services-steps.scss";
+@import "./services-container/servicesContainer.scss";
+@import "./services-container/ServicesEstimate.scss";
+@import "./services-container/steps-left.scss";
+@import "./services-container/steps-mid.scss";
+@import "./services-container/steps-right.scss";
+
+// works container styles
+
+@import "./works-container/cardItems.scss";
+@import "./works-container/itemsNavigation.scss";
+@import "./works-container/worksContainer.scss";
+@import "./works-container/worksHeader.scss";
+
+// getAnEstimate container styles
+
+@import "./get-an-estimate-container/getAnEstimateContainer.scss";
+@import "./get-an-estimate-container/projectNeed.scss";
+@import "./get-an-estimate-container/estimateMoreDetail.scss";
+@import "./get-an-estimate-container/sendEstimate.scss";
+
+// privacy container styles
+
+@import "./privacy-container/privacyContainer.scss";

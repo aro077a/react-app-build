@@ -1,0 +1,160 @@
+%inputProps {
+  width: 100%;
+  height: 64px;
+}
+
+.more__details__container{
+    width: 40%;
+    
+    &--title{
+        margin-top: 7rem;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.22;
+        letter-spacing: 0.36px;
+        text-align: left;
+        color: #1f2937;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        margin-top: 3rem;
+        input {
+          @extend %inputProps;
+          border: 1px solid $lighterGrey;
+          padding-left: 1rem;
+        }
+        .react-tel-input { 
+          .flag-dropdown {
+            border: none;
+            background-color: unset;
+            border: 1px  solid #d5d5d5;
+            border-right: none;
+          }
+          input {
+            @extend %inputProps;
+          }
+        }
+
+        &__textarea {
+          textarea {
+            width: 100%;
+            min-height: 176px;
+            border: 1px solid $lighterGrey;
+            border-radius: 5px;
+            padding: 1rem;
+            font-family: Rubik;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.81;
+            letter-spacing: 0.22px;
+          }
+        }
+
+        &__file {
+          width: 100%;
+          height: 6.4rem;
+          margin-bottom: 3.4rem;
+          border: 2px dashed $primaryLightGrey !important;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    
+          > label {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+            letter-spacing: 0.22px;
+            color: $secondaryPurple;
+            cursor: pointer;
+            > span {
+              display: inline-block;
+              font-size: 3rem;
+              font-weight: bolder;
+              color: $secondaryOrange;
+              margin-right: 1.6rem;
+              cursor: pointer;
+            }
+          }
+    
+          input {
+            display: none !important;
+          }
+        }
+
+        &__arrows {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &__leftArrow{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1.5rem;
+              cursor: pointer;
+            }
+
+            p{
+                font-family: Rubik;
+                font-size: 1.6rem;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.81;
+                letter-spacing: 0.22px;
+                text-align: center;
+                color: $primaryPaleSky;
+            }
+            &__submitButton {
+                padding: 2.3rem 7rem 2.2rem 7.1rem;
+                border-radius: 3px;
+                background-image: $primaryButtonGradient;
+                height: 64px;
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+                span {
+                  font-size: 1.6rem;
+                  line-height: 1.63;
+                  letter-spacing: 0.22px;
+                  color: $secondaryWhite;
+                }
+              }
+        }
+      }
+}
+
+@media screen and (max-width: 1024px) {
+  .more__details__container {
+      width: 70%;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+    .more__details__container {
+        width: 100%;
+
+        &__form__arrows{
+          flex-direction: column-reverse;
+          gap: 3rem;
+          margin-top: 2rem;
+
+          &__send{
+            width: 100%;
+          
+
+            &__submitButton{
+                padding: 2.3rem 0 2.2rem 0;
+                width: 100%;
+            }
+          }
+      }
+    }
+}

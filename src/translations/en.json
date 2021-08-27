@@ -1,0 +1,31 @@
+{
+  "header": {
+    "button": "Get an estimate {{framework}}"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "validation": {
+      "name": {
+        "min": "Too Short!{{framework}}",
+        "max": "Too Long!{{framework}}",
+        "required": "Required{{framework}}"
+      },
+      "email": {
+        "email": "Invalid email{{framework}}",
+        "matches": "Email is not valid{{framework}}",
+        "required": "Email is not valid{{framework}}"
+      }
+    },
+    "placeholder": {
+      "firstName": "First Name{{framework}}",
+      "lastName": "Last Name{{framework}}",
+      "email": "Email{{framework}}",
+      "company": "Company{{framework}}",
+      "message": "Your message{{framework}}"
+    },
+    "helpMessage": "how can we help you{{framework}}",
+    "checkBox": "Yes, I want to subscribe{{framework}}",
+    "acceptPolicy": "By clicking the button I agree with the collection and processing of my personal data as described in the Privacy policy.{{framework}}",
+    "button": "SEND{{framework}}"
+  }
+}

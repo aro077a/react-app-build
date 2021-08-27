@@ -1,0 +1,11 @@
+.input__container {
+  input.error {
+    border: 1px solid $primaryRed;
+    border-radius: 5px;
+  }
+  &--error {
+    color: #ff0000;
+    position: absolute;
+    font-size: 1.6rem;
+  }
+}

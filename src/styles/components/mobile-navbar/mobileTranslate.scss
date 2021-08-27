@@ -1,0 +1,23 @@
+.mobile__translate__container {
+  margin: 2.5rem 0 0 0;
+
+  &--item {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.63;
+    text-align: left;
+    color: $secondaryGrey;
+    padding: 0 1.2rem 0 0;
+    cursor: pointer;
+  }
+
+  & .selected {
+    color: $secondaryWhite;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile__translate__container {
+    text-align: center;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "header": {
+    "button": "Ստանալ Գնահատական {{framework}}"
+  },
+  "contact": {
+    "title": "Կապվեք մեզ հետ",
+    "validation": {
+      "name": {
+        "min": "Շատ կարճ է!{{framework}}",
+        "max": "Շատ երկար է!{{framework}}",
+        "required": "Պարտադիր լրացման {{framework}}"
+      },
+      "email": {
+        "email": "Անվավեր Էլ.հասցե{{framework}}",
+        "matches": "Էլ․ հասցեն անվավեր է{{framework}}",
+        "required": "Էլ․ հասցեն անվավեր է{{framework}}"
+      }
+    },
+    "placeholder": {
+      "firstName": "Անուն{{framework}}",
+      "lastName": "Ազգանուն{{framework}}",
+      "email": "Էլ.հասցե{{framework}}",
+      "company": "Ընկերություն{{framework}}",
+      "message": "Ձեր հաղորդագրությունը{{framework}}"
+    },
+    "helpMessage": "Ինչպե՞ս կարող ենք ձեզ օգնել{{framework}}",
+    "checkBox": "Այո, ես ցանկանում եմ բաժանորդագրվել{{framework}}",
+    "acceptPolicy": "Սեղմելով այս կոճակը՝ Ես համաձայնում եմ, որ իմ անձնական տվյալները հավաքագրվեն և մշակվեն, ինչպես նշված է Գաղտնիության քաղաքականության մեջ: {{framework}}",
+    "button": "Ուղարկել{{framework}}"
+  }
+}

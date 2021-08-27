@@ -1,0 +1,85 @@
+.contentDescription {
+  position: absolute;
+  top: 25%;
+  left: 13.3vw;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 4.6rem;
+    font-weight: bold;
+    line-height: 1.23;
+    letter-spacing: 1.74px;
+    color: $secondaryWhite;
+  }
+  &__info {
+    width: 31vw;
+    font-size: 1.8rem;
+    line-height: 1.44;
+    color: $secondaryWhite;
+  }
+  &__button {
+    cursor: pointer;
+    @include actionButtons(
+      unset,
+      $secondaryWhite,
+      $primaryButtonGradient,
+      5px,
+      unset,
+      unset
+    );
+    padding: 2.2rem 5.6rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contentDescription {
+    &__info {
+      width: 52vw;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contentDescription {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    margin-top: -3rem;
+    &__title {
+      text-transform: uppercase;
+      font-size: 3.1rem;
+      font-weight: bold;
+      line-height: 1.23;
+      letter-spacing: 1.74px;
+      color: #ffffff;
+      width: 22rem;
+    }
+
+    &__info {
+      width: 29rem;
+      font-size: 1.4rem;
+      line-height: 1.44;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contentDescription {
+    &__info {
+      line-height: 2rem;
+    }
+    &__button {
+      font-size: 1.6rem;
+      width: 224px;
+      height: 48px;
+      padding: 0;
+    }
+  }
+}

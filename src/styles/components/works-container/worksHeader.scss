@@ -1,0 +1,65 @@
+.worksContainer__header {
+  @include displayCenterGrid(auto);
+  padding: 4rem 0 2.4rem;
+  &--text {
+    @include textStyle($primaryDarkGrey, 2.4rem, 1.25, 0.048rem);
+  }
+  &__mobile {
+    display: none;
+    cursor: pointer;
+    &__menu {
+      display: none;
+    }
+    &__menu--hide {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .worksContainer__header {
+    padding: 4rem 0 8.6rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worksContainer__header {
+    padding: 4rem 0 3.5rem;
+    &--desktop {
+      display: none;
+    }
+    &__mobile {
+      @include textStyle($primaryPaleSky, 1.8rem, 0.12, 0.036rem);
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: left;
+      padding-left: 3rem;
+      &__showLabel {
+        @include textStyle($primaryPaleSky, 1.8rem, 0.12, 0.036rem);
+      }
+      &__allLabel {
+        @include textStyle($primaryDarkGrey, 1.8rem, 0.14, 0.025rem);
+      }
+      &__poligon {
+        border-left: 0.4rem solid transparent;
+        border-right: 0.4rem solid transparent;
+        border-top: 0.7rem solid $primaryGrey;
+      }
+
+      &__menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background-color: $primaryWoodSmoke;
+        height: 100%;
+        width: 100%;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        &--hide {
+          display: none;
+        }
+      }
+    }
+  }
+}

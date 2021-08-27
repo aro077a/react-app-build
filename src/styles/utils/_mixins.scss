@@ -1,0 +1,31 @@
+@mixin actionButtons($border, $color, $bgColor, $borderRad, $height, $width) {
+  border: $border;
+  color: $color;
+  background: $bgColor;
+  border-radius: $borderRad;
+  height: $height;
+  width: $width;
+}
+@mixin textStyle($color, $fontSize, $lineHeigth, $letterSpacing) {
+  font-size: $fontSize;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: $lineHeigth;
+  letter-spacing: $letterSpacing;
+  text-align: left;
+  color: $color;
+  text-transform: uppercase;
+}
+@mixin displayCenterGrid($column) {
+  display: grid;
+  grid-template-columns: $column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin displayCustomGrid($column, $justify, $align) {
+  display: grid;
+  grid-template-columns: $column;
+  justify-content: $justify;
+  align-items: $align;
+}

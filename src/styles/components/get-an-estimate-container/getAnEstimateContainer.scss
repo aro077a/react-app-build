@@ -1,0 +1,106 @@
+%btnProps {
+    border-radius: 3px;
+    background-image: $primaryButtonGradient;
+    height: 64px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    span {
+      font-size: 1.6rem;
+      line-height: 1.63;
+      letter-spacing: 0.22px;
+      color: $secondaryWhite;
+      text-transform: uppercase;
+    }
+}
+
+.getAnEstimate__wrapper{
+    $self: &;
+    margin-top: 15rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 16vw 0 13vw; 
+    
+    #{$self}__btnContainer{
+        display: flex;
+        justify-content: flex-end;
+        padding: 4rem 0;
+        width: 65%;
+        #{$self}--btn{
+            padding: 0 7%;
+            @extend %btnProps;
+        }
+    }
+    #{$self}__btnWrapper{
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            padding-bottom: 4rem;
+
+        #{$self}--leftArrow{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1.5rem;
+              cursor: pointer;
+
+              p{
+                font-family: Rubik;
+                font-size: 1.6rem;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 2.81;
+                letter-spacing: 0.22px;
+                text-align: center;
+                color: $primaryPaleSky;
+              }
+        }
+        #{$self}--btn{
+            padding: 2.3rem 7rem 2.2rem 7.1rem;
+            @extend %btnProps;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    .getAnEstimate__wrapper{
+        $self: &;
+        padding: 0 14.8vw 0 13vw;
+
+        #{$self}__btnContainer{
+            width: 100%;
+        }
+
+        #{$self}__btnWrapper{
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .getAnEstimate__wrapper{
+        $self: &;
+        padding: 0 6vw 0 5vw;
+
+        #{$self}__btnContainer{
+            #{$self}--btn{
+                width: 100%;
+            }
+        }
+
+        #{$self}__btnWrapper{
+            width: 100%;
+            flex-direction: column-reverse;
+            gap: 3rem;
+
+            #{$self}--btn{
+                padding-bottom: 3rem;
+                width: 100%;
+            }
+        }
+   }
+}

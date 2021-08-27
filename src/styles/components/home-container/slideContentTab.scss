@@ -1,0 +1,72 @@
+.contentTab {
+  &__container {
+    display: grid;
+    width: 28rem;
+    place-content: center;
+    gap: 10rem;
+    border: 1px solid $slideContentTabBorder;
+    padding: 2.6rem;
+    color: $secondaryWhite;
+    position: relative;
+    &:hover {
+      -webkit-transition: background 0.21s linear;
+      transition: background 0.21s linear;
+      background-color: $primaryLightGreenBlue;
+      .contentTab__container__phoneIcon {
+        display: block;
+        position: absolute;
+        top: 69.5%;
+        left: 50%;
+        z-index: 20;
+      }
+    }
+    .contentTab__container__phoneIcon {
+      display: none;
+    }
+
+    &__title {
+      display: grid;
+      gap: 3.8rem;
+      font-size: 20px;
+      h3 {
+        font-size: 2rem;
+        width: 60%;
+        line-height: 1.25;
+        letter-spacing: 0.4px;
+      }
+      &--text {
+        font-size: 1.4rem;
+        color: #c4c8ce;
+        line-height: 1.57;
+      }
+    }
+    &__info {
+      p {
+        font-size: 1.4rem;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contentTab {
+    &__container {
+      width: 24rem;
+      gap: 8rem;
+      &__title {
+        gap: 3.7rem;
+
+        h3 {
+          font-size: 1.8rem;
+          width: 64%;
+          line-height: 1.39;
+          letter-spacing: 0.36px;
+        }
+        &--text {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

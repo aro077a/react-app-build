@@ -1,0 +1,249 @@
+%boxProps {
+  width: 30%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+%checkMarkProps {
+    position: absolute;
+    top: 1.8rem;
+    right: 1.5rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: black;
+    border: 1px solid $secondaryBorderGrey;
+    border-radius: 50%;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+    transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0.2rem;
+      right: 0.7rem;
+      width: 0.4rem;
+      height: 1.1rem;
+      border-style: solid;
+      border-color: white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+    }
+
+    &:checked {
+        color: $secondaryWhite;
+        border-color: $primaryLightGreenBlueActive;
+        background: $primaryLightGreenBlueActive;
+        &::before {
+          opacity: 1;
+        }
+      }
+}
+
+.projectNeed {
+  $self: &;
+  width: 65%;
+  #{$self}__container{
+    &:nth-child(3){
+      #{$self}__box{
+          align-items: start;
+          #{$self}--description{
+            padding-left: 1rem;
+          }
+      }
+
+      #{$self}__checked{
+        align-items: start;
+          #{$self}--description{
+            padding-left: 1rem;
+          }
+      }
+    }
+    
+  width: 100%;
+
+  #{$self}__header{
+    display: flex;
+    padding: 5rem 0 2rem;
+
+    #{$self}--title {
+      font-family: Rubik;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.67;
+      letter-spacing: 0.25px;
+      text-align: left;
+    }
+
+    span{
+      margin: 1rem;
+    }
+  }
+
+
+
+   #{$self}__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    #{$self}__checked {
+      @extend %boxProps;
+      border: 1px solid $primaryLightGreenBlueActive;
+      background-color: $lightestGrey;
+      #{$self}--checkmark{
+          @extend %checkMarkProps
+      }
+      #{$self}--icon{
+        padding: 4rem 0 1rem;
+        height: 10vh;
+      }
+    }
+
+    #{$self}__box {
+      @extend %boxProps;
+      border: 1px solid $secondaryWhite;
+      border-radius: 3px;
+      box-shadow: 0 3px 16px 0 rgba(165, 165, 165, 0.16);
+      #{$self}--checkmark{
+        @extend %checkMarkProps
+      }
+      #{$self}--icon{
+        padding: 4rem 0 1rem;
+        height: 10vh;
+      }
+
+    }
+
+    #{$self}--description {
+        padding: 2rem 3rem;
+        font-family: Rubik;
+        font-size: 118%;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.88;
+        letter-spacing: 0.22px;
+        text-align: center;
+        color: $primaryDarkGrey;
+      }
+   }  
+
+  }
+  // #{$self}__btnWrapper{
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   padding: 4rem 0;
+
+  //   #{$self}--btn{
+  //         padding: 0 7%;
+  //         border-radius: 3px;
+  //         background-image: $primaryButtonGradient;
+  //         height: 64px;
+  //         outline: 0;
+  //         border: 0;
+  //         cursor: pointer;
+  //         span {
+  //           font-size: 1.6rem;
+  //           line-height: 1.63;
+  //           letter-spacing: 0.22px;
+  //           color: $secondaryWhite;
+  //           text-transform: uppercase;
+  //         }
+  //   }
+  // }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+.projectNeed {
+        $self: &; 
+        width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  %mobileBox{
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    
+  }
+
+.projectNeed {
+    $self: &;
+    #{$self}__container{ 
+    width: 100%;
+
+    #{$self}__wrapper {
+      flex-direction: column;
+      gap: 2rem;
+
+    #{$self}__checked {
+      @extend %mobileBox;
+
+        #{$self}--checkmark {
+            top: 2.8rem;
+        }
+
+        #{$self}--icon{
+          padding: 0;
+          height: 4vh;
+        }
+
+        #{$self}--description {
+            font-size: 20px;
+            margin-top: 0;
+            padding: 0;
+          }
+    }
+
+    #{$self}__box {
+      @extend %mobileBox;
+
+        #{$self}--checkmark {
+          top: 2.8rem;
+        }
+
+        #{$self}--icon{
+          padding: 0;
+          height: 4vh;
+        }
+
+        #{$self}--description {
+          font-size: 20px;
+          margin-top: 0;
+          padding: 0;
+        }
+    }
+
+      }
+    }
+    // #{$self}__btnWrapper {
+    //   padding: 5rem 0;
+
+    //   #{$self}--btn {
+    //     @include actionButtons(
+    //       unset,
+    //       $secondaryWhite,
+    //       $primaryButtonGradient,
+    //       3px,
+    //       64px,
+    //       100%
+    //     );
+    //   }
+    // }
+  }
+}

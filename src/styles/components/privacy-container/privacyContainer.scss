@@ -1,0 +1,49 @@
+.privacy__container {
+  @include displayCustomGrid(auto, center, center);
+  padding: 16rem 0rem;
+
+  &__content {
+    width: 91.1rem;
+  }
+  &--description {
+    p {
+      .title {
+        color: $primaryDarkGrey !important;
+        font-size: 24px !important;
+        font-family: Rubik !important;
+        margin: 4.9rem 2rem 0 0;
+        display: block;
+      }
+      .description {
+        font-size: 18px !important;
+        color: $primaryPaleSky !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .privacy__container {
+    &__content {
+      width: 73vw;
+    }
+    &--description {
+      p {
+        .title {
+          font-size: 18px !important;
+          margin: 1rem 0 0 0;
+          display: block;
+        }
+        .description {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .privacy__container__content {
+    width: 87vw;
+  }
+}

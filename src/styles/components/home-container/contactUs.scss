@@ -1,0 +1,201 @@
+%inputProps {
+  width: 100%;
+  height: 64px;
+}
+
+.contactUs__container {
+  width: 30%;
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15rem;
+
+  &--title {
+    font-size: 4.8rem;
+    line-height: 1.21;
+    text-transform: uppercase;
+    text-align: center;
+    color: $primaryDarkGrey;
+  }
+  &__form {
+    display: grid;
+    gap: 2.4rem;
+    margin-top: 7rem;
+    input {
+      @extend %inputProps;
+      border: 1px solid $lighterGrey;
+      padding-left: 1rem;
+      font-size: 18px;
+      &:focus-visible {
+        outline: none;
+        border: 0.2px solid;
+      }
+    }
+    .react-tel-input {
+      .flag-dropdown {
+        border: none;
+        background-color: unset;
+      }
+      input {
+        @extend %inputProps;
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.8rem;
+        color: #6b7280;
+      }
+    }
+    &__submitButton {
+      padding: 2.3rem 26.6rem 2.2rem 26.7rem;
+      border-radius: 3px;
+      background-image: linear-gradient(to bottom, #04cfd2, #027e80);
+      height: 64px;
+      outline: 0;
+      border: 0;
+      span {
+        font-size: 1.6rem;
+        line-height: 1.63;
+        letter-spacing: 0.22px;
+        color: $secondaryWhite;
+      }
+    }
+
+    &__privacy {
+      width: 44rem;
+      font-size: 1.4rem;
+      text-align-last: center;
+      margin: 0 auto 3rem auto;
+      color: #1f2937d9;
+      span {
+        color: #03989b;
+      }
+    }
+
+    &__checkbox {
+      display: block;
+      position: relative;
+      padding-left: 3.5rem;
+      margin-bottom: 1.2rem;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      &--text {
+        font-size: 1.6rem;
+        line-height: 1.81;
+        letter-spacing: 0.22px;
+        color: #6b7280;
+      }
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+          background-color: $primaryLightGreenBlue;
+        }
+
+        &:checked ~ .checkmark:after {
+          display: block;
+        }
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 1px solid #b6b9bc;
+        background-color: $secondaryWhite;
+        border-radius: 0.5rem;
+        &:after {
+          content: '';
+          position: absolute;
+          display: none;
+        }
+        &:after {
+          left: 8px;
+          top: 1px;
+          width: 6px;
+          height: 14px;
+          border: solid white;
+          border-width: 0 2px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &__textarea {
+      textarea {
+        width: 100%;
+        min-height: 176px;
+        border: 1px solid $lighterGrey;
+        border-radius: 5px;
+        padding: 1rem;
+        &:focus-visible {
+          outline: none;
+          border: 0.2px solid;
+        }
+      }
+      &--title {
+        margin: 3rem 0;
+        font-size: 3.2rem;
+        line-height: 1.25;
+        text-transform: uppercase;
+        color: #1f2937;
+      }
+    }
+    &__name {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 3.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contactUs__container {
+    margin-top: 6rem;
+    width: unset;
+    &__form {
+      &__checkbox {
+        &--text {
+          font-size: 1.4rem;
+        }
+      }
+      &__name {
+        grid-auto-flow: unset;
+      }
+      &__submitButton {
+        padding: unset;
+      }
+      &__privacy {
+        width: 50vw;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contactUs__container {
+    margin-top: 4.8rem;
+    &--title {
+      font-size: 2.4rem;
+    }
+    &__form {
+      &__privacy {
+        width: 29rem;
+      }
+      &__textarea {
+        &--title {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}

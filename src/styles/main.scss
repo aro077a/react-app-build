@@ -1,0 +1,73 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "react-dropdown/style.css";
+@import "swiper/swiper-bundle.css";
+@import "rc-collapse/assets/index.css";
+@import "react-phone-input-2/lib/style.css";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "components/components.scss";
+@import "./pages/notFound.scss";
+@import "./layout/footer.scss";
+@import "./layout/header.scss";
+
+@font-face {
+  font-family: "Trump gothic east bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/trump_gothic_east_bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Rubik-Regular.ttf");
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Trump gothic east bold, sans-serif;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.ReactModal__Content:focus-visible {
+  outline: 0;
+}
+
+.react-tel-input,
+.flag-dropdown.open,
+.selected-flag:hover,
+.react-tel-input,
+.flag-dropdown.open,
+.selected-flag:focus {
+  background-color: unset !important;
+}

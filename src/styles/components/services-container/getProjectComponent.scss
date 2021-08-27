@@ -1,0 +1,69 @@
+.get-project__content {
+  @include displayCustomGrid(auto, center, center);
+  background-color: #1f2937;
+  margin-top: 8.8rem;
+  padding: 8rem 0 6.4rem;
+  &--title {
+    opacity: 0.9;
+    font-size: 87px;
+    letter-spacing: 1.74px;
+    text-align: center;
+    color: #ffffff;
+  }
+  &--text {
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.44;
+    letter-spacing: 0.25px;
+    text-align: center;
+    color: #ffffff;
+    padding: 1.6rem 0 7.1rem;
+  }
+  &--button {
+    padding: 17px 61px 17px 62px;
+    max-width: 22.4rem;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, #04cfd2, #027e80);
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.63;
+    letter-spacing: 0.22px;
+    margin: 0 auto;
+    color: #ffffff;
+    border: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .get-project__content {
+    padding: 7.3rem 0 5.8rem;
+    &--title {
+      font-size: 64px;
+      letter-spacing: 1.28px;
+    }
+    &--text {
+      padding: 16px 0 71px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .get-project__content {
+    padding: 5.1rem 0;
+    &--title {
+      font-size: 30px;
+      letter-spacing: 0.48px;
+    }
+    &--text {
+      padding: 12px 0 38px;
+      font-size: 14px;
+      line-height: 1.86;
+      letter-spacing: 0.2px;
+    }
+    &--button {
+      padding: 9px 61px 9px 62px;
+    }
+  }
+}

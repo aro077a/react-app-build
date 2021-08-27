@@ -1,0 +1,102 @@
+.sendEstimate__container{
+    $self: &;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    #{$self}__wrapper{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+        border-top: 8px solid $primaryLightGreenBlueActive;
+        margin: 8rem 0 26rem;
+        border-radius: 3px;
+        box-shadow: 0 3px 16px 0 rgba(206, 206, 206, 0.16);
+
+        #{$self}__text__container{
+            width: 100%;
+            height: auto;
+            display: grid;
+            padding: 3rem 10rem;
+            text-align: center;
+            gap: 2rem;
+
+            #{$self}--title{
+                font-family: Rubik;
+                font-size: 2.3rem;
+                font-weight: 700;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.2;
+                letter-spacing: 0.28px;
+            }
+            
+            #{$self}--description{
+                font-family: Rubik;
+                font-size: 1.9rem;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.2;
+                letter-spacing: 0.28px;
+            }
+        }  
+        
+        #{$self}--btn{
+            margin: 2rem 0 3rem;
+            font-size: 16px;
+            cursor: pointer;
+            @include actionButtons(
+            unset,
+            $secondaryWhite,
+            $primaryButtonGradient,
+            3px,
+            64px,
+            224px
+            );
+            span{
+                text-transform: uppercase;
+                font-family: Rubik;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.63;
+                letter-spacing: 0.22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .sendEstimate__container{
+        $self: &;
+
+        #{$self}__wrapper {
+            width: 70%;
+
+            #{$self}__text__container{
+                
+                #{$self}--title{
+                    font-size: 2rem;
+                }
+
+                #{$self}--description{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sendEstimate__container{
+        $self: &;
+        #{$self}__wrapper {
+            width: 100%;
+        }
+    }
+}
+

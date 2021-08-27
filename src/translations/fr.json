@@ -1,0 +1,31 @@
+{
+  "header": {
+    "button": "Obtenir Une Estimation {{framework}}"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "validation": {
+      "name": {
+        "min": "Too Short!{{framework}}",
+        "max": "Too Long!{{framework}}",
+        "required": "Champs requis{{framework}}"
+      },
+      "email": {
+        "email": "email invalide{{framework}}",
+        "matches": "email invalide{{framework}}",
+        "required": "email invalide{{framework}}"
+      }
+    },
+    "placeholder": {
+      "firstName": "Prénom{{framework}}",
+      "lastName": "Nom de famille{{framework}}",
+      "email": "É-mail{{framework}}",
+      "company": "Compagnie{{framework}}",
+      "message": "Votre message{{framework}}"
+    },
+    "helpMessage": "Comment pouvons-nous vous aider?{{framework}}",
+    "checkBox": "Oui, je veux m'abonner{{framework}}",
+    "acceptPolicy": "En cliquant sur le bouton, j'accepte la collecte et le traitement de mes données personnelles comme décrit dans la politique de confidentialité.{{framework}}",
+    "button": "Envoyer{{framework}}"
+  }
+}

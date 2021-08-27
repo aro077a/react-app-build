@@ -1,0 +1,31 @@
+{
+  "header": {
+    "button": "Получить Оценку {{framework}}"
+  },
+  "contact": {
+    "title": "Свяжитесь с нами",
+    "validation": {
+      "name": {
+        "min": "Too Short!{{framework}}",
+        "max": "Too Long!{{framework}}",
+        "required": "Обязательно заполнить{{framework}}"
+      },
+      "email": {
+        "email": "Недействительная  эл. Почта{{framework}}",
+        "matches": "Недействительная  эл. Почта{{framework}}",
+        "required": "Недействительная  эл. Почта{{framework}}"
+      }
+    },
+    "placeholder": {
+      "firstName": "Имя{{framework}}",
+      "lastName": "Фамилня  {{framework}}",
+      "email": "Эл. Почта{{framework}}",
+      "company": "Компаня {{framework}}",
+      "message": "Ваше Сообщение {{framework}}"
+    },
+    "helpMessage": "Как мы можем вам помочь?{{framework}}",
+    "checkBox": "Да, я хочу подписаться{{framework}}",
+    "acceptPolicy": "Нажимая эту кнопку, я соглашаюсь на сбор и обработку моих личных данных, как описано в Политике конфиденциальности.{{framework}}",
+    "button": "Отправить{{framework}}"
+  }
+}

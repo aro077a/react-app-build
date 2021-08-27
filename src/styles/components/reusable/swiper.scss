@@ -1,0 +1,86 @@
+.mySwiper {
+  // margin-left: -6.6rem !important;
+  margin-left: 2rem;
+  margin-top: 14rem;
+}
+
+.swiper-container {
+  position: unset !important;
+
+  .swiper-pagination {
+    z-index: 4;
+  }
+  .swiper-button-prev {
+    top: 31.7rem;
+    left: 70rem;
+    z-index: 4;
+    &:after {
+      color: $secondaryWhite;
+      font-size: 3rem;
+    }
+  }
+
+  .swiper-button-next {
+    top: 31.7rem;
+    left: 76rem;
+    z-index: 4;
+    &:after {
+      color: $secondaryWhite;
+      font-size: 3rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1360px) {
+  .swiper-container {
+    .swiper-button-prev {
+      left: 55rem;
+    }
+
+    .swiper-button-next {
+      left: 60rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mySwiper {
+    margin-top: 7rem;
+  }
+  .swiper-container {
+    .swiper-button-prev {
+      top: 14.6rem;
+      left: 42rem;
+    }
+
+    .swiper-button-next {
+      top: 14.6rem;
+      left: 46rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mySwiper {
+    margin-top: 3.3rem;
+    margin-left: 1.5rem !important;
+  }
+  .swiper-container {
+    .swiper-button-prev {
+      top: 8.6rem;
+      left: 12rem;
+      &:after {
+        font-size: 1.4rem;
+      }
+    }
+
+    .swiper-button-next {
+      top: 8.6rem;
+      left: 14.5rem;
+      &:after {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

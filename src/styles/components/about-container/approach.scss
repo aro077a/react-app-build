@@ -1,0 +1,116 @@
+.approach__container {
+  background-color: $secondaryBackgroundWhite;
+  padding: 10rem 0;
+
+  &--title {
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 1.21;
+    letter-spacing: 0.96px;
+    color: $primaryDarkGrey;
+    text-align: center;
+  }
+
+  &--text {
+    width: 65rem;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.28px;
+    color: $primaryDarkGrey;
+    margin: 4.6rem auto;
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 139.6rem;
+    margin: 12.4rem auto 0;
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+    .blue__line {
+      width: 4.6rem;
+      margin: 1rem 0 5.3rem;
+    }
+
+    &--title {
+      font-size: 3.2rem;
+      font-weight: bold;
+      line-height: 1.25;
+      letter-spacing: 0.64px;
+      color: $primaryDarkGrey;
+    }
+
+    &--text {
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 1.94;
+      letter-spacing: 0.25px;
+      color: $primaryDarkGrey;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .approach__container {
+    padding: 8rem 0;
+    &--text {
+      width: 63rem;
+      margin: 3rem auto;
+    }
+
+    &__content {
+      max-width: 80.5rem;
+      margin: 4rem auto 0;
+
+      &--title {
+        font-size: 2.4rem;
+      }
+      &--text {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .approach__container {
+    padding: 4.8rem 0;
+
+    &--title {
+      font-size: 2.4rem;
+    }
+
+    &--text {
+      width: unset;
+      max-width: 28rem;
+      font-size: 1.4rem;
+      margin: 2rem auto 4.6rem;
+    }
+
+    &__content {
+      max-width: unset;
+      margin: 4.8rem auto 3rem;
+      flex-direction: column;
+      padding: unset;
+      justify-content: unset;
+      align-items: center;
+      > div {
+        margin-bottom: 3rem;
+      }
+      .blue__line {
+        margin: 1rem auto 2.4rem;
+      }
+
+      &--title {
+        text-align: center;
+        font-size: 2.4rem;
+      }
+
+      &--text {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+    }
+  }
+}

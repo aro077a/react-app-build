@@ -1,0 +1,22 @@
+.ourWorks__container {
+  width: 100%;
+  background-image: url(./../../../assets/images/our_works_bg.png);
+  background-repeat: no-repeat;
+  background-position-y: 40%;
+  margin-top: 11rem;
+  display: flex;
+}
+
+@media screen and (max-width: 1550px) {
+  .ourWorks__container {
+    background-position-x: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ourWorks__container {
+    background-size: cover;
+    flex-direction: column;
+    background-position: 46%;
+  }
+}

@@ -1,0 +1,139 @@
+.footer__wrapper {
+  background-color: $primaryDarkBlack;
+  padding: 5rem 0 0      14.2vw;
+  position: relative;
+  &__content {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+    margin-top: 3rem;
+    gap: 13rem;
+    &__info {
+      z-index: 1;
+
+      &--title {
+        font-size: 1.6rem;
+        color: #fafafa;
+        line-height: 2.63;
+        letter-spacing: 0.22px;
+        font-family: Rubik;
+        font-weight: 500;
+        opacity: 0.9;
+      }
+      &--text {
+        font-size: 1.4rem;
+        color: $secondaryWhite;
+        margin-top: 1.8rem;
+        opacity: 0.65;
+        
+        &-FAQ{
+          text-decoration: none;
+          display: block;
+          color: $secondaryWhite;
+          background: linear-gradient(
+    to right,
+    $primaryLightGreenBlue,
+    $primaryLightGreenBlue 50%,
+    $secondaryWhite 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 375ms ease;
+  &:hover{
+    background-position: 0 100%;
+  }
+        }
+      }
+    }
+    &__image {
+      right: 0;
+      position: absolute;
+      svg {
+        object-fit: contain;
+      }
+    }
+  }
+  &__bottom {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    border-top: 1px solid #707070;
+    padding: 3.5rem 0.5rem;
+    width: 80%;
+    margin-top: 8rem;
+    .socialIcons__container {
+      margin-top: 0;
+    }
+    &--text {
+      font-size: 1.4rem;
+      color: $secondaryWhite;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__wrapper {    
+    &__content {     
+      grid-gap: 5rem;
+      &__image{
+       img{
+        width: 70rem;
+       }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__wrapper {
+    display: grid;
+    padding: 5rem 5rem 0;
+    text-align: center;
+    place-content: center;
+    > svg {
+      width: 160px;
+      margin: auto;
+    }
+    svg {
+      margin: auto;
+    }
+
+    &__content {
+      grid-auto-flow: unset;
+      gap: 4rem;
+      &__image {
+        display: none;
+      }
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 4rem;
+      margin-left: auto;
+      margin-right: auto;
+      &--text {
+        font-size: 1.2rem;
+      }
+      .socialIcons__container {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// background: linear-gradient(
+//     to right,
+//     $primaryLightGreenBlue,
+//     $primaryLightGreenBlue 50%,
+//     $secondaryWhite 50%
+//   );
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-size: 200% 100%;
+//   background-position: 100%;
+//   transition: background-position 375ms ease;

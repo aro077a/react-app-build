@@ -1,0 +1,118 @@
+.join__team__wrapper {
+  background-color: $primaryDarkGrey;
+
+  &__container {
+    max-width: 139.6rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 8rem 1rem;
+
+    &__text {
+      &--title {
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 1.31;
+        letter-spacing: 0.45px;
+        color: $secondaryWhite;
+      }
+      &--info {
+        max-width: 70.3rem;
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 1.36;
+        letter-spacing: 0.31px;
+        color: $secondaryWhite;
+        margin-top: 3rem;
+      }
+
+      &--btn {
+        margin-top: 2.5rem;
+        font-size: 16px;
+        @include actionButtons(
+          unset,
+          $secondaryWhite,
+          $primaryButtonGradient,
+          3px,
+          64px,
+          224px
+        );
+      }
+      &--mobilebtn {
+        display: none;
+      }
+    }
+    &__image {
+      img {
+        width: 36rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .join__team__wrapper {
+    &__container {
+      max-width: 80.5rem;
+      padding: 4.8rem 1rem;
+
+      &__text {
+        &--title {
+          font-size: 2.6rem;
+        }
+        &--info {
+          max-width: 46.4rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .join__team__wrapper {
+    &__container {
+      width: fit-content;
+      max-width: unset;
+      padding: 4rem 1rem;
+      flex-direction: column;
+      align-items: center;
+
+      &__text {
+        &--title {
+          font-size: 2rem;
+          text-align: center;
+        }
+        &--info {
+          max-width: 28rem;
+          font-size: 1.4rem;
+          text-align: center;
+          margin: 2rem auto 3.9rem;
+        }
+        &--btn {
+          display: none;
+        }
+        &--mobilebtn {
+          display: block;
+          margin-top: 4.6rem;
+          font-size: 16px;
+          @include actionButtons(
+            1px solid $primaryLightGreenBlue,
+            $secondaryWhite,
+            $primaryLightGreenBlue,
+            3px,
+            48px,
+            224px
+          );
+        }
+      }
+
+      &__image {
+        img {
+          width: 22.4rem;
+          height: 17.7rem;
+        }
+      }
+    }
+  }
+}

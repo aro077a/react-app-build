@@ -1,0 +1,110 @@
+.mobileNavbar__container {
+  display: grid;
+  padding: 15rem 1vw 0 0;
+  .navbar {
+    grid-auto-flow: unset;
+    gap: 1.5rem;
+  }
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      width: fit-content;
+      font-family: Trump gothic east bold, sans-serif;
+      font-size: 4.8rem;
+      line-height: 1.21;
+      letter-spacing: 0.96px;
+      overflow: hidden;
+      background: linear-gradient(
+        to right,
+        $primaryLightGreenBlue,
+        $primaryLightGreenBlue 50%,
+        $secondaryWhite 50%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 375ms ease;
+      text-decoration: none; // text decorations are clipped in WebKit browsers
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
+
+    &--button {
+      margin: 5.5rem 0 0 0;
+      font-size: 1.6rem;
+      @include actionButtons(
+        1px solid $primaryLightGreenBlue,
+        $primaryLightGreenBlue,
+        transparent,
+        0.55rem,
+        4.8rem,
+        17rem
+      );
+    }
+  }
+
+  &__iconBlock {
+    margin: -11rem 0 0 7rem;
+    width: fit-content;
+    &--icons {
+      width: 18.5rem;
+      position: absolute;
+      left: 5%;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mobileNavbar__container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobileNavbar__container {
+    padding: 13rem 0 0 0rem;
+    text-align: left;
+    &__navbar {
+      padding-left: 0;
+      a {
+        font-size: 3.2rem;
+        margin: auto;
+      }
+
+      &--button {
+        font-size: 1.6rem;
+        margin: 7.4rem 0 0 0;
+        @include actionButtons(
+          1px solid $primaryLightGreenBlue,
+          $primaryLightGreenBlue,
+          transparent,
+          0.55rem,
+          4.8rem,
+          24rem
+        );
+      }
+    }
+
+    &__iconBlock {
+      margin: -4rem auto;
+      width: unset;
+      &--icons {
+        position: unset;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mobileNavbar__container__navbar a {
+    font-size: 2.2rem;
+  } 
+}
+
+

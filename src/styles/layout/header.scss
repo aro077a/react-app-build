@@ -1,0 +1,413 @@
+%Dropdown-root {
+  .Dropdown-control {
+    background-color: transparent;
+    border: none;
+    color: $secondaryWhite;
+
+    .Dropdown-placeholder {
+      font-size: 1.6rem;
+      line-height: 1.63;
+    }
+    .Dropdown-arrow-wrapper {
+      .Dropdown-arrow {
+        right: 30%;
+        top: 40%;
+        border-color: $secondaryWhite transparent transparent;
+        border-width: 7px 7px 0;
+      }
+    }
+  }
+  .Dropdown-menu {
+    width: 7.8rem;
+    text-align: center;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    .Dropdown-option {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.scrolled__header {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  grid-gap: 7vw;
+  grid-gap: 7vw;
+  gap: 7vw;
+  padding: 5.55rem 24rem 3rem;
+  background-color: #1f2937;
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  height: 15rem;
+  top: -5.999rem;
+  transition: transform 0.5s ease;
+  transform: translate(0, 6rem);
+  align-items: center;
+  justify-content: space-between;
+  a {
+    position: relative;
+    left: 15%;
+    width: fit-content;
+    svg {
+      width: 15vw;
+    }
+  }
+  &__last {
+    display: grid;
+    grid-template-columns: 2.8fr 2fr 1.295fr 1fr;
+    align-items: center;
+    grid-gap: 2vw;
+    gap: 1.9vw;
+    justify-items: flex-end;
+    position: relative;
+    left: 5%;
+
+    .Dropdown__root__dark {
+      @extend %Dropdown-root;
+    }
+    .Dropdown__root__light {
+      @extend %Dropdown-root;
+      .Dropdown-control {
+        color: $primaryDarkGrey;
+        .Dropdown-arrow-wrapper {
+          .Dropdown-arrow {
+            border-color: $primaryDarkGrey transparent transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &__mobile--dark,
+  &__mobile--light {
+    display: none;
+  }
+  &__mobile__menu {
+    overflow-y: auto;
+    padding-bottom: 10%;
+
+    &--logo {
+      display: none;
+    }
+    &__hide {
+      display: none;
+    }
+  }
+
+  &__button--dark {
+    cursor: pointer;
+    @include actionButtons(
+      1px solid $primaryLightGreenBlue,
+      $primaryLightGreenBlue,
+      transparent,
+      5px,
+      48px,
+      17.5rem
+    );
+  }
+  &__button--light {
+    cursor: pointer;
+    @include actionButtons(
+      1px solid $secondaryWhite,
+      $secondaryWhite,
+      $primaryLightGreenBlue,
+      5px,
+      48px,
+      17.5rem
+    );
+  }
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1.3fr 1.5fr;
+  position: absolute;
+  z-index: 1;
+  left: 13.3vw;
+  right: 14.1vw;
+  top: 5%;
+  gap: 7vw;
+  a {
+    position: relative;
+    left: 0;
+    svg {
+      width: 15vw;
+    }
+  }
+  &__last {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+    align-items: center;
+    gap: 2vw;
+    justify-items: flex-end;
+
+    .Dropdown__root__dark {
+      @extend %Dropdown-root;
+    }
+    .Dropdown__root__light {
+      @extend %Dropdown-root;
+      .Dropdown-control {
+        color: $primaryDarkGrey;
+        .Dropdown-arrow-wrapper {
+          .Dropdown-arrow {
+            border-color: $primaryDarkGrey transparent transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &__mobile--dark,
+  &__mobile--light {
+    display: none;
+  }
+  &__mobile__menu {
+    overflow-y: auto;
+    padding-bottom: 10%;
+    &--logo {
+      display: none;
+    }
+    &__hide {
+      display: none;
+    }
+  }
+
+  &__button--dark {
+    cursor: pointer;
+    @include actionButtons(
+      1px solid $primaryLightGreenBlue,
+      $primaryLightGreenBlue,
+      transparent,
+      5px,
+      48px,
+      17.5rem
+    );
+  }
+  &__button--light {
+    cursor: pointer;
+    @include actionButtons(
+      1px solid $secondaryWhite,
+      $secondaryWhite,
+      $primaryLightGreenBlue,
+      5px,
+      48px,
+      17.5rem
+    );
+  }
+}
+
+.is-open .Dropdown-arrow {
+  border-width: 7px 7px 0 !important;
+  transform: rotate(180deg);
+}
+.is-open .Dropdown-control {
+  &:before {
+    display: block !important;
+    content: '';
+    position: absolute;
+    right: 12%;
+    top: 65%;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-right: 0.95rem solid #ffffff;
+    border-bottom: 2rem solid transparent;
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 2290px) {
+  .scrolled__header {
+    a {
+      left: 5%;
+    }
+    &__last {
+      grid-template-columns: 9.65fr 2.9fr 0fr 0fr;
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .header__container {
+    gap: 2vw;
+  }
+  .scrolled__header {
+    a {
+      left: -17%;
+    }
+    &__last {
+      grid-template-columns: 9.65fr 2.9fr 0fr 0fr;
+      left: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .scrolled__header {
+    padding: 4rem 24rem 5rem;
+    height: 13rem;
+    a {
+      left: -22%;
+    }
+    &__last {
+      grid-template-columns: 9.65fr 2.9fr 0fr 0fr;
+      left: 11.85%;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .scrolled__header {
+    padding: 4rem 18.9rem 5rem;
+    &__last {
+      grid-template-columns: 9.65fr 2.9fr 0fr 0fr;
+      left: 0.85%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .scrolled__header {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    grid-template-columns: unset;
+    padding: 0.7rem 15rem 0;
+    height: 12rem;
+    a {
+      left: -10%;
+    }
+    .header__container,
+    .header__container__mobile__menu {
+      top: 4rem;
+      height: 104vh;
+      svg {
+        top: 4%;
+      }
+    }
+    &__last {
+      display: none;
+    }
+  }
+  .header__container,
+  .header-animated__container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    grid-template-columns: unset;
+    a {
+      svg {
+        width: 16rem;
+      }
+    }
+    &__last {
+      display: none;
+    }
+
+    &__mobile--dark,
+    &__mobile--light {
+      display: block;
+
+      .hamburger-react {
+        left: unset;
+        right: unset;
+        z-index: 2;
+        div {
+          div {
+            background: $primaryLightGreenBlue !important;
+          }
+        }
+      }
+    }
+
+    &__mobile__menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      background-color: #111517;
+      height: 100%;
+      width: 100%;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      &--logo {
+        position: absolute;
+        display: block;
+        top: 5%;
+        left: 5%;
+      }
+    }
+
+    &__mobile__menu__hide {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .scrolled__header {
+    padding: 0.7rem 11rem 0;
+    a {
+      left: -6%;
+      svg {
+        width: 20.65vw;
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .scrolled__header {
+    padding: 2.4rem 4rem 0;
+    .header__container,
+    .header__container__mobile__menu {
+      top: 4rem;
+      height: 113vh;
+      svg {
+        top: 5%;
+      }
+    }
+  }
+  .header__container {
+    left: 5.3vw;
+    right: 5.1vw;
+    a {
+      svg {
+        width: 16rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .scrolled__header {
+    padding: 1.8rem 2.2rem 0;
+    height: 11rem;
+    a {
+      left: 0%;
+      svg {
+        width: 15.75rem;
+        height: 50px;
+      }
+    }
+    .header__container,
+    .header__container__mobile__menu {
+      svg {
+        top: 3.5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .scrolled__header {
+    .header__container,
+    .header__container__mobile__menu {
+      padding-top: 4rem;
+    }
+  }
+}

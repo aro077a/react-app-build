@@ -1,0 +1,341 @@
+%PlayButtonProps {
+  transform: translateY(0) scale(1);
+  transition: all 0.4s;
+  &:hover {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    transform: scale(1.2);
+    g {
+      stroke: $secondaryWhite;
+    }
+    path {
+      fill: $secondaryWhite;
+    }
+  }
+}
+
+.homeContainer__wrapper {
+  .contentDescription__button {
+    margin-top: 6.1rem;
+  }
+  .center {
+    .center .slick-center {
+      color: #e67e22;
+      opacity: 1;
+      transform: scale(1.08);
+    }
+    .center {
+      opacity: 0.8;
+      transition: all 300ms ease;
+    }
+
+    .slick-slider {
+      margin: 30px auto 50px;
+    }
+    .left__arrow__icon {
+      position: absolute;
+      top: 37%;
+      right: 19%;
+      z-index: 2;
+      cursor: pointer;
+    }
+    .right__arrow__icon {
+      position: absolute;
+      top: 37%;
+      right: 14%;
+      cursor: pointer;
+    }
+
+    .slick-list {
+      padding: 15.5rem 0 10rem 14% !important;
+    }
+    .slick-dots {
+      top: 20%;
+      bottom: 0;
+      left: 13.7vw;
+      width: unset;
+      .slick-active {
+        border: 6px solid $primaryLightGreenBlue;
+        button {
+          &::before {
+            opacity: 0;
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+      }
+      li {
+        width: 16px;
+        height: 16px;
+        border: 6px solid $secondaryBorderGrey;
+        background-color: $secondaryBorderGrey;
+
+        button {
+          &::before {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+  &__slide {
+    &--title {
+      font-size: 3.5rem;
+    }
+  }
+  &__videoAndImage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .imageContainer {
+      display: none;
+    }
+  }
+
+  &__desc {
+    &__play {
+      position: absolute;
+      top: 45%;
+      left: 70vw;
+      cursor: pointer;
+      svg {
+        @extend %PlayButtonProps;
+      }
+    }
+  }
+
+  &__video__info {
+    position: absolute;
+    bottom: 0%;
+    border-top: 1px solid #707070;
+    padding: 3.6rem 5rem;
+    left: 10.9vw;
+    width: 80%;
+
+    &--text {
+      font-size: 1.6rem;
+      color: $secondaryWhite;
+      text-transform: uppercase;
+    }
+  }
+  &__popup {
+    position: relative;
+    height: inherit;
+    &__videoPopupWrapper {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translate(0, -50%);
+      &__videoPopup {
+        width: 75% !important;
+        height: unset !important;
+        max-width: 1600px;
+        margin: 0 auto 20px;
+        position: static;
+        z-index: 2;
+        video {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+
+        .play {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 11rem;
+          cursor: pointer;
+          transform: translate(-20%, -50%);
+          @extend %PlayButtonProps;
+        }
+        .hide {
+          display: none;
+        }
+      }
+      &__rangeWrapper {
+        width: 75% !important;
+        max-width: 1600px;
+        margin: 0 auto;
+        &--range {
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    input[type="range"] {
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: $primaryGrey;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: #13bba4;
+      margin-top: -1px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      width: 1px;
+      -webkit-appearance: none;
+      height: 1px;
+      cursor: ew-resize;
+      background: #434343;
+      box-shadow: -1980px 0 0 1980px #43e5f7;
+    }
+
+    &__video {
+      width: 75%;
+      height: 72%;
+      left: 13%;
+      top: 13%;
+      object-fit: contain;
+      position: absolute;
+    }
+
+    &--videoPlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      cursor: pointer;
+      z-index: 99;
+      @extend %PlayButtonProps;
+    }
+    &--videoPause {
+      display: none;
+    }
+    &--close {
+      cursor: pointer;
+      position: absolute;
+      width: 62px;
+      height: 62px;
+      top: 3%;
+      right: 3%;
+      z-index: 2;
+      &:hover {
+        path {
+          fill: $primaryLightGreenBlue;
+        }
+      }
+    }
+  }
+}
+.next-desc {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-family: Rubik !important;
+  line-height: 1.44;
+}
+
+@media screen and (max-width: 1024px) {
+  .homeContainer__wrapper {
+    & .left__arrow__icon {
+      display: none;
+    }
+    & .right__arrow__icon {
+      display: none;
+    }
+
+    &__videoAndImage {
+      .background__video {
+        display: none;
+      }
+      .imageContainer {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .homeContainer__wrapper {
+    .contentDescription__button {
+      margin-top: 2.4rem;
+    }
+    .center {
+      .slick-list {
+        padding: 7.5rem 0 10rem 15.3% !important;
+      }
+      .slick-dots {
+        top: 10%;
+      }
+    }
+
+    &__slide {
+      &--title {
+        font-size: 2rem;
+      }
+    }
+
+    .left__arrow__icon {
+      width: 2.5rem;
+      right: 22% !important;
+    }
+
+    .right__arrow__icon {
+      width: 2.5rem;
+      right: 12% !important;
+    }
+
+    &__desc {
+      &__play {
+        display: grid;
+        justify-content: center;
+        top: 78%;
+        left: 0;
+        right: 0;
+        margin-top: -2rem;
+        svg {
+          width: 8rem;
+        }
+      }
+    }
+    &__video__info {
+      text-align: center;
+      padding: 2rem 4rem;
+      &--text {
+        font-size: 1.2rem;
+      }
+    }
+    &__popup {
+      &--videoPlay {
+        width: 15vw;
+        height: 7%;
+      }
+      &__videoPopup {
+        margin: 0 auto 1rem;
+        .play {
+          width: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .homeContainer__wrapper {
+    &__slide {
+      .blue__line {
+        margin: 1rem -3.3rem;
+      }
+      &--title {
+        margin-left: -3.5rem;
+      }
+    }
+    .center {
+      .slick-dots {
+        left: 0.7rem;
+      }
+    }
+  }
+}
